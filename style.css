@@ -105,6 +105,7 @@ body {
     max-width: 170px;
     margin-right: -10px;
     opacity: 0;
+    border-radius: 50%;
 
     animation: zoomIn 1s ease forwards, floatImage 4s ease-in-out infinite;
     animation-delay: 2s, 3s;
