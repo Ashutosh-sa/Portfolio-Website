@@ -1,10 +1,23 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+    list-style: none;
+    text-decoration: none;
+}
+
+:root{
+    --text-color:#fff;
+    --bg-color:#000000;
+    --secondbg-color:#22282f;
+    --main-color:#13bbff;
+    --other-color:#c3cad5;
+
+    --h1-font:3rem;
+    --h2-font:2rem;
+    --p-font:1.1rem;
 }
 
 body {
@@ -12,52 +25,64 @@ body {
     color: #fff;
 }
 
-.header {
-    position: fixed;
-    top: 0;
-    left: 0;
+nav {
     width: 100%;
     height: 5rem;
-    padding: 0px 20px;
+    top: 0;
+    left: 0;
     background-color: #32e8ee;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: grid;
+    position: fixed;
     z-index: 100;
+    align-items: center;
     transition: .3s;
     animation: slideTop .5s ease forwards;
     animation-delay: calc(.2s * var(--i));
 
 }
+
 span {
     font-weight: 500;
     margin-right: auto;
-    margin-left:10px ;
+    margin-left:10pxpx ;
     color: black;
     font-size: 20px;
     font-family: 'Times New Roman', Times, serif;
     text-transform: uppercase;
 }
-.navbar{
+
+.links{
     display: flex;
     gap: 2rem;
     list-style: none;
 }
-.navbar a {
-    font-size: 18px;
+
+.links a{
+    font-size: 17px;
     font-weight: 200;
-    color: black;
-    text-decoration: none;
     margin-right: 10px;
     font-family: 'Times New Roman', Times, serif;
     text-transform:uppercase ;
+    color:black;
+    text-decoration:none;
+    list-style: none;
 }
 
-.navbar a:hover,
-.navbar a.active {
-    color: Red;
+.nav {
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+    
+.nav .links a:hover{
+    color:	#ff0000;
     font-weight: bolder;
 }
+
+/*#home {
+    flex-wrap: wrap;
+}*/
 
 .home {
     position: relative;
@@ -68,11 +93,10 @@ span {
     align-items: center;
     padding: 70px 10% 0;
 }
+
 .home-content{
     max-width: 600px;
-}
-
-.home-content h3{
+ h3{
     font-size: 32px;
     font-weight: 700;
     opacity: 0;
@@ -80,17 +104,17 @@ span {
     animation-delay: .7s;
 }
 
-.home-content h3:nth-of-type(2){
+h3:nth-of-type(2){
     margin-bottom: 30px;
     animation: slideTop 1s ease forwards;
     animation-delay: .7s;
 }
 
-.home-content h3 span{
+h3 span{
     color: #0ef;
 }
 
-.home-content h1{
+h1{
     font-size: 56px;
     font-weight: 700;
     margin: -3px 0;
@@ -99,13 +123,13 @@ span {
     animation-delay: 1s;
 }
 
-.home-content p{
+p{
     font-size: 16px;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
 }
-
+}
 
 .home-img img{
     max-width: 170px;
@@ -117,7 +141,6 @@ span {
     animation-delay: 2s, 3s;
 
 }
-
 
 .social-media a {
     display: inline-flex;
@@ -136,7 +159,6 @@ span {
     animation: slideLeft 1s ease forwards;
     animation-delay: calc(.2s * var(--i));
 }
-
 
 .social-media a:hover {
     background: #0ef;
@@ -172,7 +194,6 @@ span {
 
 }
 
-
 @keyframes slideLeft{
     0%{
         opacity: 0;
@@ -185,8 +206,6 @@ span {
 
 }
 
-
-
 @keyframes slideTop{
     0%{
         opacity: 0;
@@ -198,7 +217,6 @@ span {
     }
 
 }
-
 
 @keyframes slideBottom{
     0%{
@@ -224,7 +242,6 @@ span {
 
 }
 
-
 @keyframes floatImage {
     0% {
         transform: translateY(0);
@@ -236,3 +253,185 @@ span {
         transform: translateY(0);
     }
 }
+
+header.sticky{
+    background: var(--bg-color);
+    box-shadow: 0 .1rem 1rem rgba(0,0,0,0.2);
+    padding:16px 13%
+}
+
+.skills{
+    background: var(--secondbg-color);
+}
+
+.main-text{
+    text-align: center;
+    font-size: var(--h2-font);
+}
+
+.skills-main{
+    width: 100%;
+    margin-left: 20rem;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap:30px;
+    grid-column-gap:50px;
+}
+
+.skills-bar{
+    margin-bottom: 2.3rem;
+}
+
+.main-text h1{
+    font-size: var(--h1-font);
+    color: #0ef;
+}
+
+.skills-center .skills-bar .info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    font-size: var(--p-font);
+    font-weight: 600;
+}
+
+.skills-center .skills-bar .bar{
+    width: 100%;
+    height: 10px;
+    background: var(--bg-color);
+    border-radius: 25px;
+    margin-top: 10px;
+    position: relative;
+}
+
+.skills-bar .bar span{
+    width: 50%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    background: var(--main-color);
+    border-radius: 25px;
+    box-shadow:0 0 20px var(--main-color);
+}
+
+.skills-bar .bar .html{
+    width: 92%;
+    animation: html 2s;
+}
+
+.skills-bar .bar .css{
+    width: 80%;
+    animation: css 3s;
+}
+
+.skills-bar .bar .js{
+    width: 52%;
+    animation: js 4s;
+}
+
+.skills-bar .bar .mysql{
+    width: 70%;
+    animation: mysql 5s;
+}
+
+.skills-bar .bar .React{
+    width: 45%;
+    animation: React 5s;
+}
+
+.skills-bar .bar .Node{
+    width: 32%;
+    animation: Node 6s;
+}
+
+.skills-bar .bar .Excel {
+    width: 98%;
+    animation: Excel 7s;
+}
+
+@keyframes morph{
+    0%,
+    100%{
+        border-radius: 40% 60% 70% 30%/ 40% 40% 60% 50%;
+    }
+    30%{
+        border-radius: 70% 30% 50% 50% / 30% 30% 70% 70%;
+    }
+    60%{
+        border-radius: 100% 60% 60% 100%/100% 100% 60% 60%;
+    }
+    80%{
+        border-radius: 69% 31% 66% 34%/ 21% 30% 70% 79%;
+    }
+}
+
+@keyframes html{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 92%;
+    }
+}
+
+@keyframes css{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 80%;
+    }
+}
+
+@keyframes js{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 52%;
+    }
+}
+
+@keyframes mysql{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 70%;
+    }
+}
+
+@keyframes React{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 45%;
+    }
+}
+
+@keyframes Node{
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 32%;
+    }
+}
+
+@keyframes Excel {
+    0%{
+        width: 0%;
+    }
+    100%{
+        width: 98%;
+    }
+}
+
+
+
+
+
+
+
