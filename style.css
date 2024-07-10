@@ -345,9 +345,9 @@ header.sticky{
     animation: Node 6s;
 }
 
-.skills-bar .bar .Excel {
+.skills-bar .bar .DataEntry {
     width: 98%;
-    animation: Excel 7s;
+    animation: DataEntry 7s;
 }
 
 @keyframes morph{
@@ -420,13 +420,61 @@ header.sticky{
     }
 }
 
-@keyframes Excel {
+@keyframes DataEntry {
     0%{
         width: 0%;
     }
     100%{
         width: 98%;
     }
+}
+
+.projects{
+    text-align: center;
+   
+}
+.center-text h1{
+    font-size: var(--h1-font);
+    color: #0ef;
+}
+
+.projects-content{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(350px,auto));
+    align-items: center;
+    gap: 2.3rem;
+    margin: 4.2rem;
+}
+.row img{
+     height: auto;
+     width: 25%;
+     border-radius: 28px;
+     margin-bottom: 1.4rem;
+}
+
+.row  a{
+    color: #0ef;
+}
+.row{
+    background: #22282f;
+    border: 1px solid transparent;
+    box-shadow: 0 0 5px var(--main-color);
+    padding: 20px;
+}
+.row:hover{
+    transform: scale(1.1);
+}
+.row-icon i{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    font:27px;
+    border-radius: 50%;
+    color: var(--text-color);
+    background: #075fe4;
+
 }
 
 
