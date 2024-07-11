@@ -285,6 +285,7 @@ header.sticky{
 .main-text h1{
     font-size: var(--h1-font);
     color: #0ef;
+    text-decoration: #0ef underline;
 }
 
 .skills-center .skills-bar .info{
@@ -436,6 +437,7 @@ header.sticky{
 .center-text h1{
     font-size: var(--h1-font);
     color: #0ef;
+    text-decoration: #0ef underline;
 }
 
 .projects-content{
@@ -484,6 +486,7 @@ header.sticky{
 .mid-text h1{
     font-size: var(--h1-font);
     color: #0ef;
+    text-decoration: #0ef underline;
 }
 
 .certificates-content{
