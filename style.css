@@ -124,7 +124,7 @@ h1{
 }
 
 p{
-    font-size: 16px;
+    font-size: 20px;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
